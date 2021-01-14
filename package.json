@@ -1,0 +1,29 @@
+{
+  "name": "datalimite",
+  "version": "1.0.0",
+  "description": "Data Limite para o meu casamento",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedrogomes-dev/datalimite/"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "author": "Pedro Gomes",
+  "contributors": [
+    "Pedro Gomes <abc@cde.fgh> (htttps://p.g)"
+  ],
+  "license": "MIT"
+}
