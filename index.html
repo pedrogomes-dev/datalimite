@@ -8,23 +8,63 @@
     </head>
     <body>
 
-        <div w3-include-html="header.html"></div>
-    <div id="page-container">
+    <div w3-include-html="header.html"></div>
+    <div class="container" id="page-container">
         <div id="content-wrap">
 
             <h1>Hello World !</h1>
+            <div class="card-panel">
+                <div class="row">
+                    <div class="col s6">06-11-2020</div>
+                    <div class="col s6"> <span class="right">06-01-2022</span></div>
+                </div>
+                <div class="progress">
+                    <div id="progress" class="determinate" style="width: 70%"></div>
+                </div>
+            </div>
+            
+            <div class="row" id="clockdiv">
+                <div class="col s3">
+                  <span class="days"></span>
+                  <div class="smalltext">Days</div>
+                </div>
+                <div class="col s3">
+                  <span class="hours"></span>
+                  <div class="smalltext">Hours</div>
+                </div>
+                <div class="col s3">
+                  <span class="minutes"></span>
+                  <div class="smalltext">Minutes</div>
+                </div>
+                <div class="col s3">
+                  <span class="seconds"></span>
+                  <div class="smalltext">Seconds</div>
+                </div>
+              </div>
 
         </div>
-        <div w3-include-html="footer.html"></div>
     </div>
+    <div w3-include-html="footer.html"></div>
 
 
         <!--JavaScript at end of body for optimized loading-->
         <!-- Compiled and minified JavaScript -->   
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src="extras.js"></script>
+        <script type="text/javascript" src="clock.js"></script>
+
         <script>
             includeHTML();
+        </script>
+        <script>
+            let pre = document.getElementById("progress");
+            let initialTS = Date.parse('2020-11-06');
+            let finalTS = Date.parse('2022-01-06');
+            let atualTS = Date.parse(new Date());
+
+            let percent = (finalTS - initialTS) / atualTS * 100;
+            //alert(initialTS + '\n' + finalTS + '\n' + atualTS + '\n' + percent);
+            pre.style["width"] = percent+'%';
         </script>
 </body>  
 </html>
