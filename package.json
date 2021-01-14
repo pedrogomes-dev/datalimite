@@ -1,10 +1,10 @@
 {
-  "name": "datalimite",
+  "name": "node-js-sample",
   "version": "1.0.0",
-  "description": "Data Limite para o meu casamento",
-  "main": "main.js",
+  "description": "A sample Node.js app using Express 4",
+  "main": "index.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.13.3"
@@ -14,16 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pedrogomes-dev/datalimite/"
+    "url": "https://github.com/pedrogomes-dev/node-js-sample"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "author": "Pedro Gomes",
+  "author": "Mark Pundsack",
   "contributors": [
-    "Pedro Gomes <abc@cde.fgh> (htttps://p.g)"
+    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
   "license": "MIT"
 }

@@ -1,0 +1,7 @@
+{
+  "name": "Data Limite",
+  "description": "Data Limite para o nosso casamento.",
+  "repository": "https://github.com/pedrogomes-dev/node-js-sample",
+  "logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
+  "keywords": ["node", "express", "static"]
+}
