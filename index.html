@@ -93,10 +93,14 @@
         var elems = document.querySelectorAll('.carousel');
         var instances = M.Carousel.init(elems, {
       indicators : true,
-      fullWidth : true,
+      fullWidth : false,
       duration : 250
   });
       });
+      let carouselElem = document.querySelectorAll('.carousel.carousel-slider');
+      setTimeout(()=>{
+        M.Carousel.getInstance(carouselElem[0]).next();
+      },300);
     </script>
   </body>  
 </html>
