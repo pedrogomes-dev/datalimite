@@ -14,14 +14,23 @@
   </head>
   <body>
       
-    <div w3-include-html="header.html"></div>
+    <div w3-include-html="html/header.html"></div>
 
     <main>
       <div class="container" id="page-container">
           <div id="content-wrap">
-
-              <h1>Wedding Count</h1>
-              <p style="text-align: justify; text-justify: inter-word;">De acordo com o contrato de namoro vigente, ficam estabelecidos que as partes interessadas (cordialmente denominadas de pombinhos) se casarão <strong>até</strong> o próximo dia seis de janeiro próximo.</p>
+  
+              <h2>Wedding Count</h2>
+              <p style="text-align: justify; text-justify: inter-word;">De acordo com o contrato de namoro vigente, ficam estabelecidos que as partes interessadas (cordialmente denominadas de pombinhos) se casarão <strong>até</strong> o próximo dia seis de janeiro.</p>
+              
+              <div class="carousel carousel-slider center">
+                <a class="carousel-item" href="#one!"><img src="media/1.jpg"></a>
+                <a class="carousel-item" href="#two!"><img src="media/2.jpg"></a>
+                <a class="carousel-item" href="#three!"><img src="media/3.jpg"></a>
+                <a class="carousel-item" href="#four!"><img src="media/4.jpg"></a>
+                <a class="carousel-item" href="#five!"><img src="media/5.jpg"></a>
+              </div>
+              
               <div class="card-panel">
                   <div class="row">
                       <div class="col s6">06-11-2020</div>
@@ -53,11 +62,12 @@
                   </div>
                 </div>
 
+                
+
           </div>
       </div>
-    </main>
-    
-    <div w3-include-html="footer.html" style="position:fixed;bottom:0;left:0;width:100%;"></div>
+  </main>    
+    <div w3-include-html="html/footer.html" ></div>
 
     <!--JavaScript at end of body for optimized loading-->
     <!-- Compiled and minified JavaScript -->   
@@ -77,6 +87,16 @@
         //alert(initialTS + '\n' + finalTS + '\n' + atualTS + '\n' + percent);
         pre.style["width"] = percent+'%';
         pre.innerText = Math.floor(percent)+'%';
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {
+      indicators : true,
+      fullWidth : true,
+      duration : 250
+  });
+      });
     </script>
   </body>  
 </html>
