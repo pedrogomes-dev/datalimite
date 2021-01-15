@@ -2,49 +2,56 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>  
         <title>Nossa Data Limite ♥</title>
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="extras.css">
+
     </head>
     <body>
-
+      
     <div w3-include-html="header.html"></div>
     <div class="container" id="page-container">
         <div id="content-wrap">
 
-            <h1>Hello World !</h1>
+            <h1>Data Limite!</h1>
+            <pre>teste</pre>
             <div class="card-panel">
                 <div class="row">
                     <div class="col s6">06-11-2020</div>
                     <div class="col s6"> <span class="right">06-01-2022</span></div>
                 </div>
                 <div class="progress">
-                    <div id="progress" class="determinate" style="width: 70%"></div>
+                    <div id="progress" class="progress-done" style="width: 70%">
+                    
+                    </div>
                 </div>
             </div>
             
             <div class="row" id="clockdiv">
                 <div class="col s3">
                   <span class="days"></span>
-                  <div class="smalltext">Days</div>
+                  <div class="smalltext">Dias</div>
                 </div>
                 <div class="col s3">
                   <span class="hours"></span>
-                  <div class="smalltext">Hours</div>
+                  <div class="smalltext">Horas</div>
                 </div>
                 <div class="col s3">
                   <span class="minutes"></span>
-                  <div class="smalltext">Minutes</div>
+                  <div class="smalltext">Minutos</div>
                 </div>
                 <div class="col s3">
                   <span class="seconds"></span>
-                  <div class="smalltext">Seconds</div>
+                  <div class="smalltext">Segundos</div>
                 </div>
               </div>
 
         </div>
     </div>
-    <div w3-include-html="footer.html"></div>
+    <div w3-include-html="footer.html" style="position:fixed;bottom:0;left:0;width:100%;"></div>
 
 
         <!--JavaScript at end of body for optimized loading-->
@@ -65,6 +72,7 @@
             let percent = (finalTS - initialTS) / atualTS * 100;
             //alert(initialTS + '\n' + finalTS + '\n' + atualTS + '\n' + percent);
             pre.style["width"] = percent+'%';
+            pre.innerText = Math.floor(percent)+'%';
         </script>
 </body>  
 </html>
