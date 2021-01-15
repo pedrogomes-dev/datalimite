@@ -89,18 +89,32 @@
         pre.innerText = Math.floor(percent)+'%';
     </script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems, {
-      indicators : true,
-      fullWidth : false,
-      duration : 250
-  });
+      document.addEventListener('DOMContentLoaded', () => {
+      // initialize carousel
+      const carousel = document.querySelectorAll('.carousel');
+      M.Carousel.init(carousel, {
+        fullWidth: false,
+        indicators: true, // this option is require for autoplay functionnality
       });
-      let carouselElem = document.querySelectorAll('.carousel.carousel-slider');
-      setTimeout(()=>{
-        M.Carousel.getInstance(carouselElem[0]).next();
-      },300);
+      
+      // custom function for autoplaying 
+      let indicatorItems = document.querySelectorAll('.carousel .indicator-item'),
+          slideTime = 3000,
+          activeClass = "active";
+
+      setInterval(() => {
+        indicatorItems.forEach(el => {
+          if (el.classList.contains(activeClass)) {
+            sib = el.nextElementSibling;
+            if (sib == null) {
+              indicatorItems[0].click();
+            } else {
+              sib.click()
+            }
+          }
+        });
+      }, slideTime);
+    });
     </script>
   </body>  
 </html>
