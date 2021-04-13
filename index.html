@@ -86,7 +86,7 @@
         let finalTS = Date.parse('2021-09-06');
         let atualTS = Date.parse(new Date());
 
-        let percent = (finalTS - initialTS) / atualTS * 100;
+        let percent = atualTS/(finalTS-initialTS);
         //alert(initialTS + '\n' + finalTS + '\n' + atualTS + '\n' + percent);
         pre.style["width"] = percent+'%';
         pre.innerText = Math.floor(percent)+'%';
